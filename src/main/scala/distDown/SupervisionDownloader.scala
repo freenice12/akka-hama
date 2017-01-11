@@ -78,8 +78,15 @@ object SupervisionDownloader extends App {
   import DownloadManager._
   val manager = mySystem.actorOf(Props(classOf[DownloadManager], 4), "manager")
   manager ! Download("http://www.w3.org/Addressing/URL/url-spec.txt", "url-spec.txt")
+  manager ! Download("http://www.w3.org/Addressing/URL/url-spec.txt", "url-spec.txt")
+  manager ! Download("http://www.w3.org/Addressing/URL/url-spec.txt", "url-spec.txt")
+  manager ! Download("http://www.w3.org/Addressing/URL/url-spec.txt", "url-spec.txt")
+  manager ! Download("http://www.w3.org/Addressing/URL/url-spec.txt", "url-spec.txt")
+  manager ! Download("http://www.w3.org/Addressing/URL/url-spec.txt", "url-spec.txt")
+  manager ! Download("http://www.w3.org/Addressing/URL/url-spec.txt", "url-spec.txt")
+
   Thread sleep 1000
-  manager ! Download("https://github.com/scala/scala/blob/master/README.md", "README.md")
+//  manager ! Download("https://github.com/scala/scala/blob/master/README.md", "README.md")
   Thread.sleep(5000)
   mySystem.stop(manager)
   Thread.sleep(5000)
