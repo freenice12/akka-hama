@@ -68,7 +68,7 @@ target/
 lib_managed/
 src_managed/
 project/project
-project/target
+project/target/
 project/boot/
 project/plugins/project/
 
