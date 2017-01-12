@@ -68,8 +68,8 @@ class EchoHandler(connection: ActorRef, remote: InetSocketAddress) extends Actor
             writeAll()
             context become (if (peerClosed) closing else writing)
           }
-        } else if {
-          (peerClosed) context stop self
+        } else if (peerClosed) {
+           context stop self
         } else {
           context become writing
         }
