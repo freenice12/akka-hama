@@ -2,6 +2,7 @@ package io.echo
 
 import akka.actor.{ActorSystem, Props}
 import com.typesafe.config.ConfigFactory
+import scala.concurrent.duration._
 
 /**
   * Created by freenice12 on 2017-01-11.
